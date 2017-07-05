@@ -18,7 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class TestController {
 
 	private Logger logger = LoggerFactory.getLogger(getClass());
-	
+	 
 	@RequestMapping("main")
 	public ModelAndView main(){
 		return new ModelAndView("index");
