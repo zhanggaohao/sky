@@ -21,6 +21,7 @@ public class TestController {
 	
 	@RequestMapping("main")
 	public ModelAndView main(){
+		logger.info("into the testController.");
 		return new ModelAndView("index");
 	}
 	
