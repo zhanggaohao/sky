@@ -10,14 +10,14 @@ import org.springframework.web.servlet.ModelAndView;
  * @annotation TODO
  * @version 1.0
  * @author zhanggaohao
- * @date 2017Äê7ÔÂ4ÈÕ ÏÂÎç9:26:04
+ * @date 2017å¹´7æœˆ15æ—¥ ä¸‹åˆ9:17:20
  *
  */
 @Controller
 @RequestMapping("testController")
 public class TestController {
 
-	private Logger logger = LoggerFactory.getLogger(getClass());
+	private Logger logger = LoggerFactory.getLogger(TestController.class);
 	
 	@RequestMapping("main")
 	public ModelAndView main(){
