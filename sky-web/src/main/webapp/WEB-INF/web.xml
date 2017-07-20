@@ -10,7 +10,7 @@
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:applicationContext.xml</param-value>
+		<param-value>classpath:spring/applicationContext-service.xml</param-value>
 	</context-param>
 
 	<filter>
@@ -34,10 +34,10 @@
 	<filter>
         <filter-name>skyFilter</filter-name>
         <filter-class>com.sky.web.filter.SkyFilter</filter-class>
-        <init-param>
+       <!--  <init-param>
             <param-name>path</param-name>
             <param-value>login</param-value>
-        </init-param>
+        </init-param> -->
     </filter>
 
     <filter-mapping>
@@ -74,13 +74,7 @@
 
 	<error-page>
 		<error-code>404</error-code>
-		<location>/page/404.jsp</location>
+		<location>/resource/error/404.jsp</location>
 	</error-page>
-
-	<error-page>
-		<exception-type>java.lang.NullException</exception-type>
-		<location>/page/error.jsp</location>
-	</error-page>
-
 
 </web-app> 
