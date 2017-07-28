@@ -25,7 +25,7 @@ public class UserController {
     @ResponseBody
     public Result save() {
         Result result = Result.getInstance();
-        
+        userService.toString();
         return result;
     }
     

@@ -18,19 +18,20 @@ import javax.servlet.ServletResponse;
  */
 public class SkyFilter implements Filter {
 
-    public void destroy() {
-        // TODO Auto-generated method stub
-
-    }
-
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
-            throws IOException, ServletException {
-        // TODO Auto-generated method stub
-        filterChain.doFilter(servletRequest, servletResponse);
-    }
-
     public void init(FilterConfig filterConfig) throws ServletException {
         // TODO Auto-generated method stub
+        
+    }
+
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            throws IOException, ServletException {
+        // TODO Auto-generated method stub
+        chain.doFilter(request, response);
+    }
+
+    public void destroy() {
+        // TODO Auto-generated method stub
+        
     }
 
 }
