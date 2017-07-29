@@ -1,5 +1,6 @@
 package com.sky.web.controller;
 
+import org.sky.common.base.BaseController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -14,9 +15,9 @@ import org.springframework.web.servlet.ModelAndView;
  *
  */
 @Controller
-public class IndexController {
+public class IndexController extends BaseController<IndexController> {
 
-	private Logger logger = LoggerFactory.getLogger(IndexController.class);
+	private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
 	
 	@RequestMapping("/index")
 	public ModelAndView main(){
