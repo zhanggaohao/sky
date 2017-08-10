@@ -5,8 +5,6 @@ import org.slf4j.LoggerFactory;
 
 public abstract class BaseController<T> {
 
-    protected Logger getLogger(Class<T> cz) {
-        return LoggerFactory.getLogger(cz.getClass());
-    }
-
+    protected static final Logger logger = LoggerFactory.getLogger(BaseController.class);
+    
 }

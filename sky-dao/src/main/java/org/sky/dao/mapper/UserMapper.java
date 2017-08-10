@@ -1,4 +1,4 @@
-package org.sky.dao.DAO;
+package org.sky.dao.mapper;
 /**
  * @annotation TODO
  * @version 1.0
@@ -7,15 +7,16 @@ package org.sky.dao.DAO;
  *
  */
 
+import java.util.List;
+
 import org.sky.dao.DO.UserDO;
 
 public interface UserMapper {
     
-    UserDO getDOById(String id);
+    int saveUser(UserDO user);
     
-    int saveDO(UserDO user);
+    UserDO getUserById(String id);
+
+    List<UserDO> listUser();
     
-    int removeDOById(String id);
-    
-    int updateDO(UserDO user);
 }

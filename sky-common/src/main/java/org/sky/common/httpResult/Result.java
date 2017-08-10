@@ -1,4 +1,7 @@
 package org.sky.common.httpResult;
+
+import org.sky.common.enums.ErrorCode;
+
 /**
  * @annotation TODO
  * @version 1.0
@@ -23,6 +26,7 @@ public class Result {
             synchronized (Result.class) {
                 if (result == null) {
                     result = new Result();
+                    result.setErrorCode(ErrorCode.SYSTEM_SUCCESS);
                 }
             }
         }
@@ -55,6 +59,10 @@ public class Result {
     @Override
     public String toString() {
         return "Result [code=" + code + ", message=" + message + ", data=" + data + "]";
+    }
+    public void setErrorCode(ErrorCode errorCode) {
+        this.code = errorCode.getCode();
+        this.message = errorCode.getMassage();
     }
     
 }

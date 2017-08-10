@@ -1,0 +1,13 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background: #CCCCCC;
+}
+
+.sky-contextmenu {
+	width: 50%;
+	height: 50%;
+	background: #71b8ff;
+}

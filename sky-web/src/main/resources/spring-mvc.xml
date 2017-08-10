@@ -14,7 +14,7 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<!-- 定义controller扫描包 -->
-	<context:component-scan base-package="com.sky.web.controller" />
+	<context:component-scan base-package="com.sky.web.controller,com.sky.web.socket" />
 	
     <!-- 配置视图解析器 -->  
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
