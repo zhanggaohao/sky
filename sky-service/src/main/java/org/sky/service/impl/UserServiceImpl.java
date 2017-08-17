@@ -10,7 +10,7 @@ import org.sky.common.utils.MD5Util;
 import org.sky.common.utils.UUIDUtil;
 import org.sky.dao.DO.UserDO;
 import org.sky.dao.mapper.UserMapper;
-import org.sky.service.intf.IUserService;
+import org.sky.service.intf.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,8 +22,9 @@ import org.springframework.stereotype.Service;
  *
  */
 @Service
-public class UserService implements IUserService {
+public class UserServiceImpl implements UserService {
     
+    private int n = 0;
     @Autowired
     private UserMapper userMapper;
 
@@ -40,7 +41,7 @@ public class UserService implements IUserService {
             userDO.setPassword(MD5Util.md5(userDTO.getPassword()));
             userMapper.saveUser(userDO);
         } else {
-            result.setErrorCode(ErrorCode.PARAMS_IS_NULL);
+            result.setErrorCode(ErrorCode.PARAMS_ERROR);
         }
         return result;
     }
@@ -48,6 +49,35 @@ public class UserService implements IUserService {
     @Override
     public List<UserDO> listUser() {
         return userMapper.listUser();
+    }
+
+    @Override
+    public synchronized void test() {
+        if (n == 0) {
+            System.out.println("test.");
+            n++;
+        }
+    }
+
+    @Override
+    public Result login(UserDTO user) {
+        Result result = Result.getInstance();
+        if (StringUtils.isNotBlank(user.getAccount()) 
+                && StringUtils.isNotBlank(user.getPassword())) {
+            UserDO userDO = userMapper.getUserByAccount(user.getAccount());
+            if (userDO != null) {
+                if (StringUtils.equals(userDO.getPassword(), user.getPassword())) {
+                    result.setErrorCode(ErrorCode.SYSTEM_SUCCESS);
+                } else {
+                    result.setErrorCode(ErrorCode.PASSWORD_ERROR); 
+                }
+            } else {
+                result.setErrorCode(ErrorCode.ACCOUNT_NOT_EXIST);
+            }
+        } else {
+            result.setErrorCode(ErrorCode.PARAMS_ERROR);
+        }
+        return result;
     }
 
 }

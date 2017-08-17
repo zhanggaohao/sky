@@ -2,7 +2,7 @@ package com.sky.web.controller;
 
 import org.sky.common.DTO.UserDTO;
 import org.sky.common.httpResult.Result;
-import org.sky.service.intf.IUserService;
+import org.sky.service.intf.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class UserController {
 
     @Autowired
-    private IUserService userService;
+    private UserService userService;
     
     @RequestMapping("register")
     public ModelAndView register() {

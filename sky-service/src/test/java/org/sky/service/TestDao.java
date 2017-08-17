@@ -2,7 +2,6 @@ package org.sky.service;
 
 import java.util.Date;
 
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.sky.common.utils.MD5Util;
 import org.sky.common.utils.UUIDUtil;
@@ -19,7 +18,7 @@ public class TestDao {
     @Autowired
     private UserMapper userMapper;
     
-    @Test
+    //@Test
     public void test() {
         UserDO user = new UserDO();
         user.setId(UUIDUtil.getID());

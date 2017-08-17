@@ -13,10 +13,14 @@ import org.sky.dao.DO.UserDO;
  * @date 2017年7月18日 下午11:07:48
  *
  */
-public interface IUserService {
+public interface UserService {
 
     Result register(UserDTO user);
 
     List<UserDO> listUser();
+
+    void test();
+
+    Result login(UserDTO user);
 
 }

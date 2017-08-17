@@ -15,9 +15,14 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IndexController extends BaseController<IndexController> {
 	
+	@RequestMapping("/login")
+	public ModelAndView login(){
+		return new ModelAndView("login");
+	}
+	
 	@RequestMapping("/index")
 	public ModelAndView main(){
-		return new ModelAndView("index");
+	    return new ModelAndView("index");
 	}
 	
 	@RequestMapping("/amplifier")

@@ -31,10 +31,11 @@ public class SkyFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
         String path = req.getServletPath();
+        String contextPath = req.getContextPath();
         if (path != null && !path.equals("/")) {
             chain.doFilter(request, response);
         } else {
-            res.sendRedirect("/index");
+            res.sendRedirect(contextPath + "/index");
         }
     }
 

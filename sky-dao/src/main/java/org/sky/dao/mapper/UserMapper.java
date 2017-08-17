@@ -19,4 +19,6 @@ public interface UserMapper {
 
     List<UserDO> listUser();
     
+    UserDO getUserByAccount(String account);
+    
 }

@@ -8,6 +8,7 @@
 </head>
 <body>
     <a href="/user/register">注册</a>
+    <a href="/login">登录</a>
     Welcome<br/><input id="text" type="text"/>
 	<button onclick="send()">发送消息</button>
 	<hr />

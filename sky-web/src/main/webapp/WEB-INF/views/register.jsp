@@ -10,7 +10,7 @@
 	   <label>昵称</label><input name="nickname" type="text"/>
 	   <label>帐号</label><input name="account" type="text"/>
 	   <label>密码</label><input name="password" type="password"/>
-	   <input type="submit" value="提交"s/>
+	   <input type="submit" value="提交"/>
 	</form>
 </body>
 </html>
