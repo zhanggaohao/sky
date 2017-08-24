@@ -2,6 +2,7 @@ package org.sky.service;
 
 import java.util.Date;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.sky.common.utils.MD5Util;
 import org.sky.common.utils.UUIDUtil;
@@ -27,6 +28,11 @@ public class TestDao {
         user.setPassword(MD5Util.md5("666666"));
         user.setCreatetime(new Date());
         userMapper.saveUser(user);
+    }
+    
+    @Test
+    public void test1() {
+        System.out.println(userMapper.getUserByAccount("zhangxiaotian").toString());
     }
     
 }
