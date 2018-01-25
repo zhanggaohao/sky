@@ -6,7 +6,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.sky.common.utils.MD5Util;
+import com.sky.common.utils.MD5Util;
 
 public class CookieUtils {
     

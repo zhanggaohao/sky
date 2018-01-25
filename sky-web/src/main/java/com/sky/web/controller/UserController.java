@@ -1,8 +1,8 @@
 package com.sky.web.controller;
 
-import org.sky.common.DTO.UserDTO;
-import org.sky.common.httpResult.Result;
-import org.sky.service.intf.UserService;
+import com.sky.common.DTO.UserDTO;
+import com.sky.common.httpResult.Result;
+import com.sky.service.intf.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -4,10 +4,10 @@ import java.util.Date;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.sky.common.utils.MD5Util;
-import org.sky.common.utils.UUIDUtil;
-import org.sky.dao.DO.UserDO;
-import org.sky.dao.mapper.UserMapper;
+import com.sky.common.utils.MD5Util;
+import com.sky.common.utils.UUIDUtil;
+import com.sky.dao.DO.UserDO;
+import com.sky.dao.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;

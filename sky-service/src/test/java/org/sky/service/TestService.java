@@ -2,7 +2,7 @@ package org.sky.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.sky.service.intf.UserService;
+import com.sky.service.intf.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;

@@ -1,6 +1,6 @@
 package com.sky.web.controller;
 
-import org.sky.common.base.BaseController;
+import com.sky.common.base.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;

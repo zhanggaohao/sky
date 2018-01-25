@@ -27,10 +27,10 @@ public class TestMongoDB {
     public void test() {
         Query query = new Query();
         query.addCriteria(Criteria.where("name").is("tom"));
-        User user = mongoTemplate.findOne(query, User.class, "blog");
+        User user = mongoTemplate.findOne(query, User.class, "user");
         System.out.println(user.toString());
-        redisTemplate.opsForValue().set("user", JSON.toJSONString(user), 120, TimeUnit.SECONDS);
-        System.out.println(redisTemplate.opsForValue().get("user"));
+        //redisTemplate.opsForValue().set("user", JSON.toJSONString(user), 120, TimeUnit.SECONDS);
+        //System.out.println(redisTemplate.opsForValue().get("user"));
     }
 
 }
